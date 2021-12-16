@@ -5,26 +5,6 @@
 
 [Trello!](https://trello.com/invite/b/iVd385du/36c657cd0a2d9f3e7cfa63008ca5bc56/first-fullstack-application)
 
-# Game/Movie Review Application
-## ***Description***
-I would like to create a repeatable use engaging experience that allows someone to track and log data over an extensive history from a profile they create. This application will want to make use of an API for a list of either movies/games and create one itself for a user's profile that they create when they sign up! For my fullstack project, one potential idea I am having is making a game or movie review application that lets people continuously leave feedback on movies they like. Details below. 
-
-***
-### ***Goals and Potential Ideas ***
-
-***
-I think these ideas are very similar in functionality I have just not decided yet which theme it will be based on. I wanted to create an app where a list of movies/games are displayed on a page and users who interact can either write a written review on it with a score, add it to a watch list for later, or log their favorite movies with a score attatched onto their own profiles. The beginning screen will have a sign up option that will create a profile for someone and allow them to write their name and attatch a picture of themselves with a descirption. On their profile page, it will include a list of movies/games they've reviewed or logged or have on their watch list for easy access and a Navbar that will allow the user to alternate from their profile to a list of games or movies they decide to review, or add to their profile if they want to
-
-*Objectives:*
-
-- [] ERD Diagram for list of organizational hierchy of project
-- [] Functional Nav bar that alternates between seperate routes/pages
-- [] Utulizes API and maps a list of movies/games for the user to interact with 
-- [] Login and profile information that is stored in backend mongoose databse for the specific user
-- [] Clicking on individual movies/games will give you the option to review them or add to a list
-- [] Professional styling, onClick and hover effects and neatly centered components
-- [] [Potentially] A way to view a list of all profiles and the data contained within on the page
-
 # Recipe Website 
 ## ***Description***
 Perhaps similar in functionality but a completely different user experience will be to create an application for looking a cooking recipes. I wanted to create another repeatable useful experience for a user that will allow them to make use of data from an api and be able to log the recipes they use, ones they like, and create ones of their own! This particular fullstack application will be a cooking recipe guide and one which allows users to post recipes themselves. Details below. 
