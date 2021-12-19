@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import './App.css';
@@ -16,8 +15,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/Recipes" component={Recipes} />
-          <Route path="/Login" component={Login} />
-          <Route exact path="/SignUp" component={Signup} />
+          <Route path="/logininfo" component={Login} />
+          <Route path="/SignUp" component={Signup} />
         </Switch>
       </header>
     </div>

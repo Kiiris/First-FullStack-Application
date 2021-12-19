@@ -3,11 +3,12 @@ const Schema = mongoose.Schema;
 
 const Recipe = new Schema(
   {
-    Food: { type: String, required: true },
+    food: { type: String, required: true },
     made_by: { type: String, required: true },
     image: { type: String, required: true },
     cooktime: { type: Number, required: true },
-    // stars: { type: Number, required: true },
+    ingredients: { type: String, required: true },
+    instructions: { type: String, required: true },
     etc: [{ details: String, review: String, healthy: Boolean }]
   },
   { timestamps: true }

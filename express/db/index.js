@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-let MONGODB_URI = 'mongodb://127.0.0.1:27017/ridesDatabase';
+let MONGODB_URI = 'mongodb://127.0.0.1:27017/recipeDatabase';
 
 mongoose
   .connect(MONGODB_URI, {
@@ -8,7 +8,7 @@ mongoose
     useNewURLParser: true
   })
   .then(() => {
-    console.log('Successfull connection!');
+    console.log('Successfull connection! ');
   })
   .catch((e) => {
     console.error('Connection Error', e.message);

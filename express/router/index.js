@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const controller = require('../controllers/Controller.js').default;
+const controller = require('../controllers/Controller.js');
 
 const router = Router();
 
@@ -11,3 +11,5 @@ router.get('/getprofilebyid/:id', controller.getProfileById);
 router.get('/getallrecipes', controller.getAllRecipes);
 router.post('/createrecipes', controller.createRecipe);
 router.get('/getrecipebyid/:id', controller.getRecipeById);
+
+module.exports = router;

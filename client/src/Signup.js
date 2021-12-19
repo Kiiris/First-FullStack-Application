@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-const Signup = () => {
-  const [form, setForm] = useState({
+function Signup(props) {
+  const [Sign, setSign] = useState({
+    email: '',
     username: '',
     password: '',
     passwordConfirm: '',
@@ -9,20 +10,27 @@ const Signup = () => {
   });
 
   const inputHandler = (e) => {
-    setForm({ ...form, [e.target.id]: e.target.value });
+    setSign({ ...Sign, [e.target.id]: e.target.value });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    form.password === form.passwordConfirm
-      ? ((e.target.className = 'valid'), setForm({ ...form, valid: true }))
-      : ((e.target.className = 'invalid'), setForm({ ...form, valid: false }));
+    Sign.password === Sign.passwordConfirm
+      ? setSign({ ...Sign, valid: true })
+      : setSign({ ...Sign, valid: false });
   };
 
   return (
-    <div className="form">
+    <div className="sign">
       <h1>Sign Up</h1>
       <form>
+        <input
+          onChange={inputHandler}
+          type="text"
+          placeholder="Email"
+          id="email"
+        />
+        <label htmlFor="emailaddress">Email</label>
         <input
           onChange={inputHandler}
           type="text"
@@ -50,17 +58,18 @@ const Signup = () => {
         <button onClick={submitHandler} type="submit">
           Sign Up
         </button>
-        <p>
-          {form.valid === true ? 'Passwords Match!' : 'Passwords must match'}
+        {/* <p>
+          {Sign.valid === true ? 'Passwords Match!' : 'Passwords must match'}
         </p>
         <p>
-          {form.password.length && form.passwordConfirm.length < 7
+          {Sign.password.length && Sign.passwordConfirm.length < 7
             ? 'Password MUST be 7 characters'
             : 'Strong password!'}
-        </p>
+          ''
+        </p> */}
       </form>
     </div>
   );
-};
+}
 
 export default Signup;
