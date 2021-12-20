@@ -1,61 +1,77 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+const BASE_URL = 'http://localhost:3001/api/';
 
-function Signup(props) {
-  const [Sign, setSign] = useState({
+function Signup(isLoggedIn, setisLoggedIn) {
+  const [Profile, setProfiles] = useState([]);
+  const [newProfile, setNewProfile] = useState({
     email: '',
     username: '',
     password: '',
     passwordConfirm: '',
-    valid: false
+    favoriteAnimal: ''
   });
 
   const inputHandler = (e) => {
-    setSign({ ...Sign, [e.target.id]: e.target.value });
+    setNewProfile({ ...newProfile, [e.target.id]: e.target.value });
   };
 
-  const submitHandler = (e) => {
+  const makeUser = async () => {
+    const res = await axios.post(`${BASE_URL}/createprofiles`, newProfile);
+    setProfiles(res.data.Profile);
+    console.log(res);
+  };
+
+  const SignupButton = (e) => {
     e.preventDefault();
-    Sign.password === Sign.passwordConfirm
-      ? setSign({ ...Sign, valid: true })
-      : setSign({ ...Sign, valid: false });
+    Profile.password === Profile.passwordConfirm
+      ? setNewProfile({ ...newProfile }, setisLoggedIn(true), makeUser())
+      : setNewProfile({ ...newProfile });
   };
 
   return (
     <div className="sign">
-      <h1>Sign Up</h1>
+      <h2>Sign Up</h2>
       <form>
         <input
           onChange={inputHandler}
           type="text"
+          value={newProfile.email}
           placeholder="Email"
           id="email"
         />
-        <label htmlFor="emailaddress">Email</label>
         <input
           onChange={inputHandler}
           type="text"
+          value={newProfile.username}
           placeholder="Username"
           id="username"
         />
-        <label htmlFor="username">Username</label>
 
         <input
           onChange={inputHandler}
           type="password"
+          value={newProfile.password}
           placeholder="Password"
           id="password"
         />
-        <label htmlFor="password">Password</label>
 
         <input
           onChange={inputHandler}
           type="password"
+          value={newProfile.passwordConfirm}
           placeholder="Confirm password"
           id="passwordConfirm"
         />
-        <label htmlFor="passwordConfirm">Confirm password</label>
+        <input
+          onChange={inputHandler}
+          type="text"
+          value={newProfile.favoriteAnimal}
+          placeholder="Favorite Animal?"
+          id="favoriteAnimal"
+        />
 
-        <button onClick={submitHandler} type="submit">
+        <button onClick={SignupButton} type="submit">
           Sign Up
         </button>
         {/* <p>

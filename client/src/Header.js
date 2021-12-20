@@ -1,15 +1,37 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
+import App from './App';
 
-const Header = () => {
+const Header = (Profile, isLoggedIn) => {
   return (
     <div>
-      <nav className="nav-bar">
-        <Link to="/">Home</Link>
-        <Link to="/logininfo"> Login</Link>
-        <Link to="/recipes"> Recipes</Link>
-        <Link to="/SignUp"> Sign Up</Link>
-      </nav>
+      <ul id="navbar">
+        <nav>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/logininfo"> Login</Link>
+          </li>
+          <li>
+            <Link to="/recipes"> Recipes</Link>
+          </li>
+          <li>
+            <Link to="/signup"> Sign Up</Link>
+          </li>
+          <li>
+            <Link to="/createrecipe/">Make Recipes!</Link>
+          </li>
+          <li>
+            <Link to="/allprofiles/">All Chefs!</Link>
+          </li>
+          {isLoggedIn === true ? (
+            <li>
+              <Link to="/profile/id">{Profile.username}</Link>
+            </li>
+          ) : null}
+        </nav>
+      </ul>
     </div>
   );
 };

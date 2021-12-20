@@ -1,11 +1,12 @@
-const Profile = require('../models/profile');
-const Recipe = require('../models/recipes');
+// const Profile = require('../models/profile');
+// const Recipe = require('../models/recipes');
+const { Profile, Recipe } = require('../models');
 
 const createProfile = async (req, res) => {
   console.log(req.body);
   try {
     const profiles = await Profile.create(req.body);
-    console.log(ride);
+    console.log(profiles);
     await profiles.save();
     return res.status(201).json({ profiles });
   } catch (error) {
@@ -69,11 +70,48 @@ const getRecipeById = async (req, res) => {
   }
 };
 
+const updateRecipe = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Recipe.findByIdAndUpdate(
+      id,
+      req.body,
+      { new: true },
+      (err, recipe) => {
+        if (err) {
+          res.status(500).send(err);
+        }
+        if (!recipe) {
+          res.status(500).send('Recipe not found!');
+        }
+        return res.status(200).json(recipe);
+      }
+    );
+  } catch (error) {
+    // return res.status(500).send(error.message);
+  }
+};
+
+const deleteRecipe = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleted = await Recipe.findByIdAndDelete(id);
+    if (deleted) {
+      return res.status(200).send('Recipe deleted');
+    }
+    throw new Error('Recipe not found');
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
 module.exports = {
   createProfile,
   getAllProfiles,
   getProfileById,
   createRecipe,
   getAllRecipes,
-  getRecipeById
+  getRecipeById,
+  deleteRecipe,
+  updateRecipe
 };
