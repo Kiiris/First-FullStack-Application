@@ -18,7 +18,7 @@ const AllProfiles = (props) => {
     return(
         <div>
              <h1>See all our chefs!</h1>
-      <section className="recipelists">
+      <section>
         {allProfiles.map((e) => (
           <ProfileList
             name={e.username}

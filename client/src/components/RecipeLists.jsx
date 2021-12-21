@@ -1,14 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 import axios from 'axios'
 const DELETE_URL = 'http://localhost:3001/api/recipes/'
 
 const RecipeList = (props) => {
-// const [allRecipes, setAllRecipes] = useState[{props}]
-// console.log(props)
-console.log(props._id)
     const deleteRecipe = async (e) => {
         e.preventDefault()
-        // console.log(DELETE_URL, props.match.id)
         const res = await axios.delete(`${DELETE_URL}${props._id}`)
     }
 

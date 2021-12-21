@@ -5,7 +5,6 @@ const BASE_URL = 'http://localhost:3001/api';
 
 function Recipes(props) {
   const [recipes, setRecipes] = useState([]);
-
   useEffect(() => {
     getRecipes();
   }, []);

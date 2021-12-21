@@ -1,23 +1,67 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+// const BASE_URL = 'http://localhost:3001/api/getallprofiles';
 
 function Login(props) {
-  const [isLoggedIn, setisLoggedIn] = useState(false);
-  const [Login, setLogin] = useState({
-    username: '',
-    password: '',
-    valid: false
-  });
+  // const [isLoggedIn, setisLoggedIn] = useState(false);
+  // const [Profile, setProfiles] = useState({});
+  // const [Login, setLogin] = useState({
+  //   username: '',
+  //   password: ''
+  // });
 
+  // useEffect(() => {
+  //   let isCancelled = false;
+  //   const getProfileList = async () => {
+  //     const response = await axios.get(`${BASE_URL}`);
+  //     if (!isCancelled) {
+  //       setProfiles(response.data.profiles);
+  //     }
+  //   };
+  //   getProfileList();
+  //   return () => {
+  //     isCancelled = true;
+  //   };
+  // }, []);
+
+  // const loginButton = (e) => {
+  //   e.preventDefault();
+  //   Profile.forEach((element) => {
+  //     if (
+  //       element.username === Login.username &&
+  //       element.password === Login.password
+  //     ) {
+  //       setisLoggedIn(true);
+  //       console.log('it works!');
+  //     }
+  //   });
+  // };
+
+  // const inputHandler = (e) => {
+  //   setLogin({ ...Login, [e.target.id]: e.target.value });
+  // };
   return (
     <div>
-      <h1>Please Login Here</h1>
-      <form>
-        <input type="text" placeholder="Username" />
-        <input type="text" placeholder="Password" />
+      {/* <form>
+        <input
+          type="text"
+          onChange={inputHandler}
+          value={Login.username}
+          id="username"
+          placeholder="Username"
+        />
+        <input
+          type="text"
+          onChange={inputHandler}
+          value={Login.password}
+          id="password"
+          placeholder="Password"
+        />
 
-        <button type="submit">Login</button>
-      </form>
+        <button onClick={loginButton} type="submit">
+          Login
+        </button>
+      </form> */}
     </div>
   );
 }

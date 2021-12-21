@@ -110,3 +110,10 @@ img{
   align-items: bottom;
   max-height: 20%;
 }
+
+.valid{
+  position:absolute;
+  margin: auto;
+  bottom:30px;
+  width: 100%
+}
