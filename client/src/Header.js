@@ -60,12 +60,16 @@ const Header = ({ setcurrentUser }) => {
           <li>
             <Link to="/signup"> Sign Up</Link>
           </li>
-          <li>
-            <Link to="/createrecipe/">Make Recipes!</Link>
-          </li>
-          <li>
-            <Link to="/allprofiles/">All Chefs!</Link>
-          </li>
+          {isLoggedIn === true ? (
+            <li>
+              <Link to="/createrecipe/">Make Recipes!</Link>
+            </li>
+          ) : null}
+          {isLoggedIn === true ? (
+            <li>
+              <Link to="/allprofiles/">All Chefs!</Link>
+            </li>
+          ) : null}
           {isLoggedIn === true ? (
             <li>
               <Link to="/yourprofile/">Profile</Link>

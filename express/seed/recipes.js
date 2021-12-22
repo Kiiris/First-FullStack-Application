@@ -18,7 +18,8 @@ const main = async () => {
       details:
         'These blueberry muffins are quick and easy with a moist and tender center bursting with blueberries and perfectly golden brown top. They are extra easy to make, too!',
       review: 'No reviews yet, be the first to make one!',
-      healthy: false
+      healthy: false,
+      liked: true
     },
 
     {
@@ -35,7 +36,8 @@ const main = async () => {
       details:
         'This version of crash hot potatoes, crispy smashed and roasted potatoes, is topped with bagel-inspired smoked salmon, red onions, and capers. It’s a unique and delicious appetizer!',
       review: 'No reviews yet..Would you like to add one?',
-      healthy: true
+      healthy: true,
+      liked: false
     }
   ];
   await Recipe.insertMany(recipes);

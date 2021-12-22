@@ -22,6 +22,7 @@ const UpdateRecipe = (props) => {
   const changeRecipe = async (e) => {
     e.preventDefault()
     console.log(PUT_URL, props.match.params.id)
+    //{liked:true}
     const res = await axios.put(`${PUT_URL}${props.match.params.id}`, newRecipe)
     console.log('working!',res)
     setRecipe(res.data)

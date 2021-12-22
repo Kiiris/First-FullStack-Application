@@ -11,7 +11,8 @@ const Recipe = new Schema(
     instructions: { type: String, required: true },
     details: String,
     review: String,
-    healthy: Boolean
+    healthy: Boolean,
+    liked: Boolean
   },
   { timestamps: true }
 );

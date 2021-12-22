@@ -13,5 +13,6 @@ router.post('/createrecipes', controller.createRecipe);
 router.get('/getrecipebyid/:id', controller.getRecipeById);
 router.put('/recipes/:id', controller.updateRecipe);
 router.delete('/recipes/:id', controller.deleteRecipe);
+router.get('/likedrecipes', controller.getLikedRecipe);
 
 module.exports = router;

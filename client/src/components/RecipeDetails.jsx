@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 const BASE_URL = 'http://localhost:3001/api/getrecipebyid/'
+const UPDATE_URL = 'http://localhost:3001/api/recipes/'
 
 const RecipeDetails = (props) => {
 const [recipeDetails, setRecipeDetails] = useState({})
@@ -21,6 +22,22 @@ useEffect(()=>{
     } 
 },[])
 
+const likeRecipe = async (e) => {
+    e.preventDefault()
+    console.log(UPDATE_URL, props.match.params.id)
+    //{liked:true}
+    const res = await axios.put(`${UPDATE_URL}${props.match.params.id}`, {"liked":true})
+
+}
+
+const unlikeRecipe = async (e) => {
+    e.preventDefault()
+    console.log(UPDATE_URL, props.match.params.id)
+    //{liked:true}
+    const res = await axios.put(`${UPDATE_URL}${props.match.params.id}`, {"liked":false})
+
+}
+
 
     return(
         <div>
@@ -32,6 +49,8 @@ useEffect(()=>{
                     <h2>
                         All you need to know..
                         </h2>
+                        <button onClick={likeRecipe}>Like Me!</button>
+                        <button onClick={unlikeRecipe}>Unlike Me!</button>
                         <li> {recipeDetails.food} {recipeDetails.details}</li> 
                         <li> What do people have to say? {recipeDetails.review}</li> 
                         <li> {recipeDetails.healthy === true ? 'This is a healthy meal!' : null}</li>
