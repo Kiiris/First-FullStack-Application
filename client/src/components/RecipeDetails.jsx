@@ -27,14 +27,18 @@ const likeRecipe = async (e) => {
     console.log(UPDATE_URL, props.match.params.id)
     //{liked:true}
     const res = await axios.put(`${UPDATE_URL}${props.match.params.id}`, {"liked":true})
-
 }
-
 const unlikeRecipe = async (e) => {
     e.preventDefault()
-    console.log(UPDATE_URL, props.match.params.id)
-    //{liked:true}
     const res = await axios.put(`${UPDATE_URL}${props.match.params.id}`, {"liked":false})
+}
+const isHealthy = async (e) => {
+    e.preventDefault()
+    const res = await axios.put(`${UPDATE_URL}${props.match.params.id}`, {"healthy":true})
+}
+const isnotHealthy = async (e) => {
+    e.preventDefault()
+    const res = await axios.put(`${UPDATE_URL}${props.match.params.id}`, {"healthy":false})
 
 }
 
@@ -53,8 +57,11 @@ const unlikeRecipe = async (e) => {
                         <button onClick={unlikeRecipe}>Unlike Me!</button>
                         <li> {recipeDetails.food} {recipeDetails.details}</li> 
                         <li> What do people have to say? {recipeDetails.review}</li> 
+                        <button onClick={isHealthy}>Is this a healthy meal?</button>
+                        <button onClick={isnotHealthy}>Not so much</button>
                         <li> {recipeDetails.healthy === true ? 'This is a healthy meal!' : null}</li>
                         <button><nav><Link to={`/updaterecipe/${props.match.params.id}`}>Any Errors? Change it!</Link></nav></button>
+
                 
                     </section>
                   </div>

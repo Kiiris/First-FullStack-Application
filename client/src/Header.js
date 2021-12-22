@@ -5,7 +5,7 @@ const BASE_URL = 'http://localhost:3001/api/getallprofiles';
 
 const Header = ({ setcurrentUser }) => {
   const [isLoggedIn, setisLoggedIn] = useState(false);
-
+  const [isActive, setActive] = useState(false);
   const [Profile, setProfiles] = useState({});
   const [Login, setLogin] = useState({
     username: '',
@@ -26,6 +26,10 @@ const Header = ({ setcurrentUser }) => {
     };
   }, []);
 
+  const ToggleClass = () => {
+    setActive(!isActive);
+  };
+
   const loginButton = (e) => {
     e.preventDefault();
     Profile.forEach((element) => {
@@ -35,9 +39,14 @@ const Header = ({ setcurrentUser }) => {
       ) {
         setisLoggedIn(true);
         setcurrentUser(element);
-        console.log(element);
+        ToggleClass();
       }
     });
+  };
+
+  const logoutButton = () => {
+    ToggleClass();
+    setisLoggedIn(false);
   };
 
   const inputHandler = (e) => {
@@ -75,9 +84,16 @@ const Header = ({ setcurrentUser }) => {
               <Link to="/yourprofile/">Profile</Link>
             </li>
           ) : null}
+          {isLoggedIn === true ? (
+            <li>
+              <Link to="/" className="logoutbutton" onClick={logoutButton}>
+                Logout
+              </Link>
+            </li>
+          ) : null}
         </nav>
       </ul>
-      <form className="valid">
+      <form className={!isActive ? 'valid' : 'loggedin'}>
         <input
           type="text"
           onChange={inputHandler}
@@ -93,7 +109,7 @@ const Header = ({ setcurrentUser }) => {
           placeholder="Password"
         />
 
-        <button onClick={loginButton} type="submit">
+        <button className="loginbutton" onClick={loginButton} type="submit">
           Login
         </button>
       </form>

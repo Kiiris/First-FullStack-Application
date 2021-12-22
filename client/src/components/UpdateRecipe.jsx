@@ -32,14 +32,14 @@ const UpdateRecipe = (props) => {
     <h1>Let's change around some stuff!</h1>
       <div className="recipeForm">
       <form>
-        <input
+        <input className="updaterecipe"
           onChange={handleUpdateinput}
           type="text"
           value={newRecipe.food}
           placeholder="What's on the menu?"
           id="food"
         />
-        <input
+        <input className="updaterecipe"
           onChange={handleUpdateinput}
           type="text"
           value={newRecipe.made_by}
@@ -47,7 +47,7 @@ const UpdateRecipe = (props) => {
           id="made_by"
         />
 
-        <input
+        <input className="updaterecipe"
           onChange={handleUpdateinput}
           type="text"
           value={newRecipe.image}
@@ -55,35 +55,35 @@ const UpdateRecipe = (props) => {
           id="image"
         />
 
-        <input
+        <input className="updaterecipe"
           onChange={handleUpdateinput}
           type="number"
           value={newRecipe.cooktime}
           placeholder="Cooktime? Min "
           id="cooktime"
         />
-        <input
+        <input className="updaterecipe"
           onChange={handleUpdateinput}
           type="text"
           value={newRecipe.ingredients}
           placeholder="What are ingredients?"
           id="ingredients"
         />
-        <input
+        <input className="updaterecipe"
           onChange={handleUpdateinput}
           type="text"
           value={newRecipe.review}
           placeholder="Be the first to review!"
           id="review"
         />
-        <input
+        <input className="updaterecipe"
           onChange={handleUpdateinput}
           type="text"
           value={newRecipe.instructions}
           placeholder="How shall we prepare?"
           id="instructions"
         />
-        <input
+        <input className="updaterecipe"
           onChange={handleUpdateinput}
           type="choice"
           value={newRecipe.details}

@@ -2,16 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #d6abc1;
@@ -109,11 +99,66 @@ img{
 .DELETEbutton {
   align-items: bottom;
   max-height: 20%;
+  border-radius:5px;
+  padding:0.4em 1.2em;
+  margin: 0 0.1em 0.1em 0;
 }
 
 .valid{
   position:fixed;
   bottom:0;
   margin: auto;
-  width: 100%
+  width: 50;
+  background:none;
+}
+
+.loggedin{
+  position:fixed;
+  bottom:0;
+  margin: auto;
+  width: 50;
+  display:none;
+}
+
+.username{
+  padding:10px;
+  border-radius:10px;
+  margin: 1rem;
+  box-shadow: slategray;
+}
+
+.password{
+  padding:10px;
+  border-radius:10px;
+  margin: 1rem;
+  box-shadow: slategray;
+}
+
+button{
+  border-radius:5px
+}
+
+.loginbutton{
+  padding:0.4em 1.2em;
+  margin: 0 0.1em 0.1em 0;
+  border:0.16em solid rgba(255,255,255,0);
+  border-radius:2em;
+  box-sizing: border-box;
+  font-weight:500;
+  font-size: initial;
+  color: #276488;
+  text-shadow: 0 0.08em 0.08em rgba(0,0,0,0.35);
+  transition: all 0.2s;
+  text-align:center;
+  cursor:pointer;
+
+}
+
+.updaterecipe{
+  border: .05rem solid red;
+  border-radius: 1em;
+  height: 10vh;
+  padding: 0.5em;
+  margin: 1.2rem;
+
 }
