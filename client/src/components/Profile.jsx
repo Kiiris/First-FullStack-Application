@@ -55,7 +55,7 @@ useEffect(() => {
         <section className="profilelayout">
           <article>
 <h2 id="allneeded">Your Account</h2></article>
-            <h1> Here are your Favorite Recipes!  </h1>
+            <h1> Best Recipes!  </h1>
         <div className="editaccount">
         <h2 className="signin">Edit your Account!</h2>
         <h3 id='required'>Indicates a required field</h3>

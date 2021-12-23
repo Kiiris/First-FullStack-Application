@@ -102,7 +102,7 @@ const Header = ({ setcurrentUser }) => {
           placeholder="Username"
         />
         <input
-          type="text"
+          type="password"
           onChange={inputHandler}
           value={Login.password}
           className="password"
