@@ -13,12 +13,15 @@ const Profiles = (props) => {
   }, []);
   return (
     <div>
-      <h1> {profiles.username} </h1>
-      <p>{profiles.favoriteAnimal}</p>
-      <div />
-      <p>
-        {profiles.email} {profiles.email}
+      <img src="https://cdnb.artstation.com/p/marketplace/presentation_assets/000/531/745/large/file.jpg?1601392062" />
+      <h1 id="niceheader"> This is {profiles.username}'s profile </h1>
+      <p className="psections">
+        Their favorite animal is a {profiles.favoriteAnimal}
       </p>
+      <div />
+      <h1>Some things about them...</h1>
+      <p className="psections">{profiles.description}</p>
+      <p id="allneeded">Contact @ {profiles.email}</p>
     </div>
   );
 };

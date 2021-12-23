@@ -76,14 +76,57 @@ color: black;
   
 }
 
-#profileheader{
+#niceheader{
   border: .1em solid #66492e;
   box-shadow: 1rem 1rem 1rem 1rem rgb(41, 28, 24);
   border-top-left-radius: 2em 2em; 
   border-top-right-radius: 2em 2em; 
   border-bottom-left-radius: 2em 2em;
   border-bottom-right-radius: 2em 2em;
+  transition: all .7s;
+  min-width: 20em;
 }
+
+#niceheader:hover{
+  border: .08em solid #66492e;
+  box-shadow: .5rem .5rem .5rem .5rem rgb(41, 28, 24);
+
+}
+#allneeded{
+  font-family:'Charm', cursive;
+  color: burlywood;
+  border: .05em solid #8f9a9c;
+  box-shadow: .2rem .2rem .2rem .2rem rgb(41, 28, 24);
+  border-top-left-radius: 1em 1em; 
+  border-top-right-radius: 1em 1em; 
+  border-bottom-left-radius: 1em 1em;
+  border-bottom-right-radius: 1em 1em;
+  min-width: 10em;
+}
+
+.psections{
+  font-family: 'Courgette', cursive;
+  background: rgba(143, 98, 85, 0.2);
+  color: burlywood;
+  border: .05em solid #8f9a9c;
+  box-shadow: .2rem .2rem .2rem .2rem rgb(41, 28, 24);
+  border-top-left-radius: 1em 1em; 
+  border-top-right-radius: 1em 1em; 
+  border-bottom-left-radius: 1em 1em;
+  border-bottom-right-radius: 1em 1em;
+  transition: all .7s;
+}
+
+.psections:hover{
+  border: .08em solid rgb(146, 110, 79);
+  font-size: larger;
+  border-top-left-radius: 1.5em 1.5em; 
+  border-top-right-radius: 1.5em 1.5em; 
+  border-bottom-left-radius: 1.5em 1.5em;
+  border-bottom-right-radius: 1.5em 1.5em;
+  box-shadow: .4rem .4rem .4rem .4rem rgb(41, 28, 24);
+}
+
 
 .editaccount{
   background-size: cover;
@@ -154,7 +197,60 @@ border-style: groove;
   padding: 1rem;
   margin: 4rem;
 }
+.nonmenucontainer{
+border: 2em navy;
+  background-color:sandybrown;
+  border: .1em solid #66492e;
+  box-shadow: 1rem 1rem 1rem 1rem rgb(41, 28, 24);
+  color: #ffffff;
+  border-radius: 1em;
+  display:grid;
+  text-size-adjust: 100%;
+  grid-template-rows:  1fr  ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content:center;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 4rem;
+  transition: all 1.2s;
+}
 
+.nonmenucontainer:hover{
+  background: slateblue;
+  border:1.2em rgb(199, 193, 218);
+  box-shadow: 0 0 1rem 1rem rgb(161, 143, 137);
+  color:black;
+    display:grid;
+    grid-template-rows:  1fr  ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 4rem;
+}
+
+.profilemenucontainer{
+    background-color:sandybrown;
+    border: .1em solid #66492e;
+    box-shadow: 1rem 1rem 1rem 1rem rgb(41, 28, 24);
+    color: #ffffff;
+    font-family: 'Charm',cursive;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin: 1.2em;
+    border-radius: 1em;
+    text-size-adjust: 100%;
+    /* padding: 1rem; */
+    transition: all .8s;
+  }
+  
+  .profilemenucontainer:hover{
+    background: slateblue;
+    border:1.2em rgb(199, 193, 218);
+    box-shadow: 0 0 1rem 1rem rgb(161, 143, 137);
+    color:black;
+      padding: .3rem;
+  }
 img{
   border:powderblue;
   border-radius: 50%;
@@ -184,6 +280,31 @@ img{
 
 .DELETEbutton:hover{
   background-color: red;
+}
+
+.errorbutton{
+  font-family:'Charm', cursive;
+  height: 20%;
+  border-radius:2em;
+  padding:0.4em 1.2em;
+  margin: 0 0.1em 0.1em 0;
+  display: inline-block;
+        background-color: rgb(117, 180, 105);
+        border-radius: .3em;
+        border: .1em double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: .7em;
+        padding: .8em;
+        min-width: 14vw;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 1.5rem;
+}
+
+.errorbutton:hover{
+
+  background-color: chartreuse;
 }
 
 .valid{
@@ -404,6 +525,7 @@ h1{
 }
 
 #required{
+  font-family: 'Friloje', cursive;
   color:red;
 }
 
@@ -412,3 +534,22 @@ h1{
   bottom:-10%;
 }
 
+.menutext{
+  font-family:'Concert One', cursive;
+}
+
+.nonboringtext{
+  font-family: 'Great Vibes', cursive;
+}
+
+.sociallinks{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+#success{
+  font-family: 'Fuzzy Bubbles', cursive;
+  color:green;
+}

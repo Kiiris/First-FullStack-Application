@@ -24,7 +24,7 @@ const AllProfiles = (props) => {
             name={e.username}
             email={e.email}
             image={e.image}
-            {...e}
+            // {...e}
             onClick={() => props.history.push(`/profile/${e._id}`)}
           />
         ))}

@@ -51,10 +51,10 @@ useEffect(() => {
 
     return(
         <div>
-          <h1 id="profileheader">Welcome to your profile, {currentuser.currentuser.username}</h1>
+          <h1 id="niceheader">Welcome to your profile, {currentuser.currentuser.username}</h1>
         <section className="profilelayout">
           <article>
-<h2>Your Account</h2></article>
+<h2 id="allneeded">Your Account</h2></article>
             <h1> Here are your Favorite Recipes!  </h1>
         <div className="editaccount">
         <h2 className="signin">Edit your Account!</h2>

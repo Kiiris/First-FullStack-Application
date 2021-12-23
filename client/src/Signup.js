@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 const BASE_URL = 'http://localhost:3001/api/';
 
-function Signup(isLoggedIn, setisLoggedIn) {
+function Signup() {
   const [Profile, setProfiles] = useState([]);
+  const [valid, setValid] = useState(false);
   const [newProfile, setNewProfile] = useState({
     email: '',
     username: '',
@@ -25,8 +26,8 @@ function Signup(isLoggedIn, setisLoggedIn) {
   const SignupButton = (e) => {
     e.preventDefault();
     Profile.password === Profile.passwordConfirm
-      ? setNewProfile({ ...newProfile }, setisLoggedIn(true), makeUser())
-      : setNewProfile({ ...newProfile });
+      ? setNewProfile({ ...newProfile }, setValid(true), makeUser())
+      : setValid(false);
   };
 
   return (
@@ -86,15 +87,12 @@ function Signup(isLoggedIn, setisLoggedIn) {
           <button className="signupbutton" onClick={SignupButton} type="submit">
             Sign Up
           </button>
-          {/* <p>
-          {Sign.valid === true ? 'Passwords Match!' : 'Passwords must match'}
-        </p>
-        <p>
-          {Sign.password.length && Sign.passwordConfirm.length < 7
-            ? 'Password MUST be 7 characters'
-            : 'Strong password!'}
-          ''
-        </p> */}
+          <p id="required">
+            {newProfile.password != newProfile.passwordConfirm
+              ? 'Passwords Must Match'
+              : null}
+          </p>
+          <p id="sucess">{valid === true ? 'Welcome Aboard!' : null}</p>
         </form>
       </div>
     </div>
