@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Home(props) {
+function Home() {
   return (
     <div className="home">
       <h1 id="niceheader">Resist-a-Piece of these Recipes!</h1>

@@ -58,14 +58,15 @@ const editReview = async (e) => {
         <article> 
             <h1 id="niceheader">What do We Need?</h1>
         <p className='psections'>{recipeDetails.ingredients}</p>
+        <p className='psections'>Cooktime: {recipeDetails.cooktime} minutes</p>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXvX9BG1ztKlzsYYWp6iRJgrE2u4X5g6kS_g&usqp=CAU"/>
             <h1 id="niceheader"> How Do We Prepare?</h1>
 
-                        <p className='psections'>{recipeDetails.review == "" ? 'Nothing to see here..Would you like to write a review?' : recipeDetails.review}</p>
+                        <p id='allneeded'>{recipeDetails.instructions}</p>
                         <hr/>
                         <article> <h1>What do people have to say?</h1></article>
                         <hr/>
-                        <p id="allneeded"> {recipeDetails.review}</p>
+                        <p className="psections"> {recipeDetails.review == "" ? 'Nothing to see here..Would you like to write a review?' : recipeDetails.review}</p>
                         <button className="likebutton" onClick={likeRecipe}><img src={'https://cdn1.iconfinder.com/data/icons/youtuber/256/thumbs-up-like-gesture-512.png'} /></button>
                         <button className="unlikebutton" onClick={unlikeRecipe}><img src={'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Font_Awesome_5_regular_thumbs-down.svg/1200px-Font_Awesome_5_regular_thumbs-down.svg.png'}/></button>
                         <br/>
