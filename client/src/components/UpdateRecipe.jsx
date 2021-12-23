@@ -29,15 +29,16 @@ const UpdateRecipe = (props) => {
 
 } 
   return <div>
-    <h1>Let's change around some stuff!</h1>
-      <div className="recipeForm">
-      <form>
+    <h1>Think you can do it better hot shot?</h1>
+      <div>
+      <form className="recipeForm">
         <input className="updaterecipe"
           onChange={handleUpdateinput}
           type="text"
           value={newRecipe.food}
           placeholder="What's on the menu?"
           id="food"
+          size="100"
         />
         <input className="updaterecipe"
           onChange={handleUpdateinput}
@@ -45,14 +46,16 @@ const UpdateRecipe = (props) => {
           value={newRecipe.made_by}
           placeholder="Who's our lovely chef?"
           id="made_by"
+          size="100"
         />
 
         <input className="updaterecipe"
           onChange={handleUpdateinput}
-          type="text"
+          type="search"
           value={newRecipe.image}
-          placeholder="Show a photo!"
+          placeholder="Show a photo! (url)"
           id="image"
+          size="100"
         />
 
         <input className="updaterecipe"
@@ -61,27 +64,31 @@ const UpdateRecipe = (props) => {
           value={newRecipe.cooktime}
           placeholder="Cooktime? Min "
           id="cooktime"
+          size="100"
         />
-        <input className="updaterecipe"
+        <textarea className="updaterecipe"
           onChange={handleUpdateinput}
           type="text"
           value={newRecipe.ingredients}
-          placeholder="What are ingredients?"
+          placeholder="What are the ingredients?"
+          size="100"
           id="ingredients"
         />
-        <input className="updaterecipe"
-          onChange={handleUpdateinput}
-          type="text"
-          value={newRecipe.review}
-          placeholder="Be the first to review!"
-          id="review"
-        />
-        <input className="updaterecipe"
+        <textarea className="updaterecipe"
           onChange={handleUpdateinput}
           type="text"
           value={newRecipe.instructions}
           placeholder="How shall we prepare?"
           id="instructions"
+          size="300"
+        />
+        <input className="updaterecipe"
+          onChange={handleUpdateinput}
+          type="text"
+          value={newRecipe.review}
+          placeholder="Write your own impressions!"
+          id="review"
+          size="100"
         />
         <input className="updaterecipe"
           onChange={handleUpdateinput}
@@ -89,10 +96,11 @@ const UpdateRecipe = (props) => {
           value={newRecipe.details}
           placeholder="Add some lovely details"
           id="details"
+          size="100"
         />
 
-        <button onClick={changeRecipe}type="submit">
-          Let's make some changes!
+        <button className="createrecipebutton" onClick={changeRecipe}type="submit">
+        <img src={'https://i.etsystatic.com/17857814/r/il/ffa60b/1602328778/il_1588xN.1602328778_4r6m.jpg'}/>
         </button>
         </form>
         </div>

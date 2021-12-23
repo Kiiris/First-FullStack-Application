@@ -36,6 +36,29 @@ const getProfileById = async (req, res) => {
   }
 };
 
+const updateProfile = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Profile.findByIdAndUpdate(
+      id,
+      req.body,
+      { new: true },
+      (err, profiles) => {
+        if (err) {
+          res.status(500).send(err);
+        }
+        if (!profiles) {
+          res.status(500).send('Profile not found!');
+        }
+        return res.status(200).json(profiles);
+      }
+    );
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500);
+  }
+};
+
 const createRecipe = async (req, res) => {
   console.log(req.body);
   try {
@@ -124,5 +147,6 @@ module.exports = {
   getRecipeById,
   deleteRecipe,
   updateRecipe,
-  getLikedRecipe
+  getLikedRecipe,
+  updateProfile
 };

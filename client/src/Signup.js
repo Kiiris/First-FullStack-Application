@@ -30,51 +30,63 @@ function Signup(isLoggedIn, setisLoggedIn) {
   };
 
   return (
-    <div className="sign">
-      <h2>Sign Up</h2>
-      <form>
-        <input
-          onChange={inputHandler}
-          type="text"
-          value={newProfile.email}
-          placeholder="Email"
-          id="email"
-        />
-        <input
-          onChange={inputHandler}
-          type="text"
-          value={newProfile.username}
-          placeholder="Username"
-          id="username"
-        />
+    <div>
+      <h1>Let's Get Cooking!</h1>
+      <div className="sign">
+        <h2 className="signin">Sign Up!</h2>
+        <form>
+          <input
+            className="signinput"
+            onChange={inputHandler}
+            type="text"
+            value={newProfile.email}
+            placeholder="Email"
+            id="email"
+            size="40"
+          />
+          <input
+            className="signinput"
+            onChange={inputHandler}
+            type="text"
+            value={newProfile.username}
+            placeholder="Username"
+            id="username"
+            size="40"
+          />
 
-        <input
-          onChange={inputHandler}
-          type="password"
-          value={newProfile.password}
-          placeholder="Password"
-          id="password"
-        />
+          <input
+            className="signinput"
+            onChange={inputHandler}
+            type="password"
+            value={newProfile.password}
+            placeholder="Password"
+            id="password"
+            size="40"
+          />
 
-        <input
-          onChange={inputHandler}
-          type="password"
-          value={newProfile.passwordConfirm}
-          placeholder="Confirm password"
-          id="passwordConfirm"
-        />
-        <input
-          onChange={inputHandler}
-          type="text"
-          value={newProfile.favoriteAnimal}
-          placeholder="Favorite Animal?"
-          id="favoriteAnimal"
-        />
+          <input
+            className="signinput"
+            onChange={inputHandler}
+            type="password"
+            value={newProfile.passwordConfirm}
+            placeholder="Confirm password"
+            id="passwordConfirm"
+            size="40"
+          />
+          <input
+            className="signinput"
+            onChange={inputHandler}
+            type="text"
+            value={newProfile.favoriteAnimal}
+            placeholder="Favorite Animal?"
+            id="favoriteAnimal"
+            size="40"
+          />
 
-        <button onClick={SignupButton} type="submit">
-          Sign Up
-        </button>
-        {/* <p>
+          <button className="signupbutton" onClick={SignupButton} type="submit">
+            Sign Up
+          </button>
+          {/* <p>
           {Sign.valid === true ? 'Passwords Match!' : 'Passwords must match'}
         </p>
         <p>
@@ -83,7 +95,8 @@ function Signup(isLoggedIn, setisLoggedIn) {
             : 'Strong password!'}
           ''
         </p> */}
-      </form>
+        </form>
+      </div>
     </div>
   );
 }

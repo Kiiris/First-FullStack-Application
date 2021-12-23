@@ -9,7 +9,7 @@ const Profile = new Schema(
     passwordConfirm: { type: String, required: true },
     favoriteAnimal: { type: String, required: true },
     image: String,
-    details: String,
+    description: String,
     favoriteMeals: String
   },
   { timestamps: true }

@@ -54,15 +54,15 @@ const Header = ({ setcurrentUser }) => {
   };
 
   return (
-    <div>
+    <div className="header">
       <ul id="navbar">
         <nav>
           <li>
             <Link to="/">Home</Link>
           </li>
-          {/* <li>
-            <Link to="/logininfo"> Login</Link>
-          </li> */}
+          <li>
+            <Link to="/about"> About</Link>
+          </li>
           <li>
             <Link to="/recipes"> Recipes</Link>
           </li>

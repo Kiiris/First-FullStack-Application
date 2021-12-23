@@ -7,6 +7,7 @@ router.get('/', (req, res) => res.send('This is working!!'));
 router.get('/getallprofiles', controller.getAllProfiles);
 router.post('/createprofiles', controller.createProfile);
 router.get('/getprofilebyid/:id', controller.getProfileById);
+router.put('/profiles/:id', controller.updateProfile);
 
 router.get('/getallrecipes', controller.getAllRecipes);
 router.post('/createrecipes', controller.createRecipe);

@@ -16,7 +16,7 @@ function Recipes(props) {
 
   return (
     <div>
-      <h1>Recipes go here</h1>
+      <h1>See Our Selection...</h1>
       <section className="recipelists">
         {recipes.map((e) => (
           <RecipeList
