@@ -1,7 +1,7 @@
-# First-FullStack-Application
+# Resist-A-Piece
 
 
-*Finished Project!*
+*First Full-stack Project!*
 
 [Trello!](https://trello.com/invite/b/iVd385du/36c657cd0a2d9f3e7cfa63008ca5bc56/first-fullstack-application)
 
@@ -24,3 +24,33 @@ This project will demonstrate my ability to utulize full CRUD from my own databa
 - [Completed!] Professional styling, onClick and hover effects and neatly centered component
 - [Completed!] A way to score/review recipes that users interact with that is stored in a users profile (like a watch list)
 - [Completed!] [Potentially] a feature in the users profile that allows them to write and track progress on the site, and things they've cooked over a period of time
+
+### **_Screenshots_**
+
+# Landing Page
+![Image](https://i.imgur.com/nWHmgjA.jpg)
+---
+
+# Register Your Account!
+![Image](https://i.imgur.com/W26DPcw.png)
+---
+
+# View Some Recipes
+![Image](https://i.imgur.com/jV2LHnB.png)
+---
+
+# Edit Some Old Recipes...Or Create Your Own!
+![Image](https://i.imgur.com/i17FzIK.png)
+---
+
+# View Your Own Account
+![Image](https://i.imgur.com/27AbYRS.jpg)
+---
+
+# Edit Your Account...See the Best Recipes!
+![Image](https://i.imgur.com/Qy6rU4T.jpg)
+
+# Leave a Like/Dislike on Recipes, Leave a Review!
+![Image](https://i.imgur.com/EQvdOtM.jpg)
+
+## All that and more...on Resist a Piece!

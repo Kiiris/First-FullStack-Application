@@ -34,6 +34,7 @@ const likeRecipe = async (e) => {
     //{liked:true}
     const res = await axios.put(`${UPDATE_URL}${props.match.params.id}`, {"liked":true})
 }
+
 const unlikeRecipe = async (e) => {
     e.preventDefault()
     const res = await axios.put(`${UPDATE_URL}${props.match.params.id}`, {"liked":false})
@@ -48,7 +49,7 @@ const editReview = async (e) => {
 
     return(
         <div>
-            <h1 id="niceheader"> {recipeDetails.food} </h1>
+            <h1 id="niceheader"> {recipeDetails.made_by}'s {recipeDetails.food} </h1>
             <h2 id='allneeded'> All You Need To Know...</h2>
             <br/>
             <p className='psections'>{recipeDetails.details}</p>
